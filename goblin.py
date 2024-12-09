@@ -73,7 +73,7 @@ class Goblin(Creature):
         attacks instead.
         '''
         if override == -1:
-            time.sleep(1)
+            time.sleep(2)
             rand = dice.d6() % 3
         else:
             rand = override

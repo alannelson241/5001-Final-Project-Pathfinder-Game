@@ -6,6 +6,7 @@
 Helper functions involving user input or randomness.
 '''
 import dice
+import time
 
 def target_select(target_list, option_name):
     # https://stackoverflow.com/questions/37565793/how-to-let-the-user-select-an-input-from-a-finite-list

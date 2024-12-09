@@ -302,6 +302,7 @@ class Fighter(Creature):
 
         print(self.name, "rolls", attack, "for their attack roll.")
         for enemy in range(len(target_list)):
+            time.sleep(1.5)
             if attack >= target_list[enemy].ac + 10 + target_list[enemy].circumstance_bonus - target_list[enemy].status_penalty - target_list[enemy].og_circumstance_penalty or override == 1:
                 print("Critical hit!", self.name + "'s might leaves", target_list[enemy].name, "off-guard!")
                 specific_damage = damage * 2

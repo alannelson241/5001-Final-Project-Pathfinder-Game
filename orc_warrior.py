@@ -68,7 +68,7 @@ class Orc_Warrior(Creature):
         1 action: makes a shortsword Strike.
         '''
         if override == -1:
-            time.sleep(1)
+            time.sleep(2)
         current_max = 0
         for i in range(len(target_list)):
             if target_list[i].current_hp > current_max:

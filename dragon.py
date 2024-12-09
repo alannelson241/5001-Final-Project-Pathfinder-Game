@@ -46,7 +46,7 @@ class Dragon(Creature):
 
         Constructor function for the Dragon class.
         '''
-        super().__init__("Zelos, the Green Dragon",5,1,3,2,2,4,"large",8,135,28,3,3,3,3,0,0,2,3,0,2,0,"arcana",24)
+        super().__init__("Zelos the Green Dragon",5,1,3,2,2,4,"large",8,135,28,3,3,3,3,0,0,2,3,0,2,0,"arcana",24)
         self.team = "enemy"
         self.spell_dc = 25
         self.attack_bonus = 18
@@ -97,7 +97,7 @@ class Dragon(Creature):
         Draconic Frenzy; if no, uses Draconic Frenzy and makes a jaws attack
         with the same target criteria as above.
         '''
-        time.sleep(1)
+        time.sleep(2)
         if self.first_turn == True:
             self.frightful_presence(target_list)
             self.first_turn = False

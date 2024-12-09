@@ -76,6 +76,7 @@ class Hobgoblin_Soldier(Creature):
 
         1 action: The soldier raises their shield.
         '''
+        time.sleep(2)
         if self.actions == 1:
             self.raise_a_shield()
         elif self.actions > 1:

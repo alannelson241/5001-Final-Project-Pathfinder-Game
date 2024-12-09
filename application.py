@@ -77,6 +77,7 @@ def encounter(player_list, enemy_list, init_list):
                         char[1].take_turn(player_list, enemy_list)
                     elif char[1].team == "enemy":
                         char[1].ai(player_list, enemy_list)
+                    print('')
                 char[1].end_turn(encounter_list)
                 print("")
                 time.sleep(1)

@@ -36,7 +36,7 @@ class Orc_Commander(Creature):
         
         Constructor function for the Orc_Commander class.
         '''
-        super().__init__("Katthok, the Orc Commander",4,2,1,-1,1,2,"medium",3,47,21,3,3,2,4,0,0,2,2,0,0,0,"society",18)
+        super().__init__("Katthok the Orc Commander",4,2,1,-1,1,2,"medium",3,47,21,3,3,2,4,0,0,2,2,0,0,0,"society",18)
         self.team = "enemy"
         self.attack_bonus = 12
         self.battle_cry_used = False
@@ -62,7 +62,7 @@ class Orc_Commander(Creature):
         1-2 actions: makes a maul Strike.
         '''
         if override == -1:
-            time.sleep(1)
+            time.sleep(2)
         current_min = 1000
         for i in range(len(target_list)):
             if target_list[i].current_hp < current_min and target_list[i].current_hp > 0:

@@ -460,6 +460,7 @@ class Wizard(Creature):
         Uses normal multiple attack penalty: -5 on second attack, -10 on third +
         '''
         super().strike(target,"Ignition",4,6,"fire",0,False,False,False,False,True,2)
+        time.sleep(1.5)
 
     def shield(self): 
         # https://2e.aonprd.com/Spells.aspx?ID=1671
@@ -477,6 +478,7 @@ class Wizard(Creature):
         print(self.name, "casts Shield!")
         print("A magical barrier grants them +1 AC until the start of their next turn.")
         self.circumstance_bonus = 1
+        time.sleep(1)
 
     def gust_of_wind(self, target_list, override = 0): 
         # https://2e.aonprd.com/Spells.aspx?ID=1550
@@ -627,6 +629,7 @@ class Wizard(Creature):
                             target.current_hp -= damage
                             print(target.name, "has", target.current_hp, "HP.")
                             valid = True
+                            time.sleep(1)
                         else:
                             raise TypeError("Select a target in the encounter.")
                     except TypeError as err:
@@ -659,6 +662,7 @@ class Wizard(Creature):
             self.invis_target = target
             target.be_hidden()
             print(target.name, "vanishes from sight!")
+            time.sleep(1.5)
 
     def thunderstrike(self, target, override = 0): 
         # https://2e.aonprd.com/Spells.aspx?ID=1721
@@ -847,6 +851,7 @@ class Wizard(Creature):
             print(self.name, "casts Haste on", target.name + "!")
             target.extra_actions = 1
             print(target.name + "'s movements speed up! They gain an extra action each turn.")
+            time.sleep(1)
 
     def dagger_strike(self, target): 
         # https://2e.aonprd.com/Weapons.aspx?ID=358
@@ -866,3 +871,4 @@ class Wizard(Creature):
         Uses agile multiple attack penalty: -4 on the second attack, -8 on third +
         '''
         super().strike(target,"Dagger",2,4,"piercing",0,True,True,False,False,False,1)
+        time.sleep(1.5)

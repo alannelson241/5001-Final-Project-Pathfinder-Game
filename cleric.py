@@ -219,6 +219,7 @@ class Cleric(Creature):
         Uses normal multiple attack penalty: -5 on second attack, -10 on third +
         '''
         super().strike(target,"Divine Lance",4,4,"spirit",0,False,False,True,False,False,2)
+        time.sleep(1.5)
 
     def bless(self, target_list): 
         # https://2e.aonprd.com/Spells.aspx?ID=1451
@@ -242,6 +243,7 @@ class Cleric(Creature):
             print(self.name, "casts Bless! Their allies gain a +1 bonus to attack rolls!")
             for ally in range(len(target_list)):
                 target_list[ally].status_bonus = 1
+            time.sleep(1.5)
 
     def sudden_blight(self, target_list, override = 0): 
         # https://2e.aonprd.com/Spells.aspx?ID=2033
@@ -481,6 +483,7 @@ class Cleric(Creature):
                         if target.current_hp > target.max_hp:
                             target.current_hp = target.max_hp
                         print(target.name, "has", target.current_hp, "HP.")
+                        time.sleep(1.5)
                     else:
                         raise TypeError("Select an ally in the encounter.")
                 except TypeError as err:
@@ -493,7 +496,7 @@ class Cleric(Creature):
                     healing += dice.d10()
                 for ally in range(len(target_list)):
                     if override == 0:
-                        time.sleep(.5)
+                        time.sleep(1.5)
                     print(target_list[ally].name, "regains", healing, "HP.")
                     target_list[ally].current_hp += healing
                     if target_list[ally].current_hp > target_list[ally].max_hp:
@@ -513,6 +516,7 @@ class Cleric(Creature):
         self.actions -= 1
         print(self.name, "raises their shield! They gain +2 AC until the start of their next turn.")
         self.circumstance_bonus = 2
+        time.sleep(1)
 
     def mace_strike(self, target): 
         # https://2e.aonprd.com/Weapons.aspx?ID=362
@@ -534,4 +538,5 @@ class Cleric(Creature):
         Uses standard multiple attack penalty: -5 on the second attack, -10 on third +
         '''
         super().strike(target, "Mace",2,8,"bludgeoning",3,False,False,False,False,False,1)
+        time.sleep(1.5)
 

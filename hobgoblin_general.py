@@ -37,7 +37,7 @@ class Hobgoblin_General(Creature):
 
         Constructor function for the Hobgoblin_General class.
         '''
-        super().__init__("Gnarlok, the Hobgoblin General",4,3,2,0,1,2,"medium",5,70,23,2,3,3,3,1,0,2,2,0,0,0,"society",20)
+        super().__init__("Gnarlok the Hobgoblin General",4,3,2,0,1,2,"medium",5,70,23,2,3,3,3,1,0,2,2,0,0,0,"society",20)
         self.team = "enemy"
         self.attack_bonus = 15
         self.first_turn = True
@@ -69,7 +69,7 @@ class Hobgoblin_General(Creature):
         1 action: the hobgoblin raises their shield.
         '''
         if override == 0:
-            time.sleep(1)
+            time.sleep(2)
 
         if self.first_turn == True:
             self.actions = 4

@@ -161,4 +161,5 @@ class Rogue(Creature):
             print(target.name + "'s fear makes them off-guard to", self.name + "!")
             target.be_off_guard_specific()
         super().strike(target, "Shortsword",2,6,"piercing",4,True,True,False,True,False,1)
+        time.sleep(1.5)
 
